@@ -3,7 +3,23 @@
   "buildCommand": "echo 'skip build'",
   "outputDirectory": ".",
   "framework": null,
+  "redirects": [
+    {
+      "source": "/admin",
+      "destination": "/admin/pages/login.html",
+      "permanent": false
+    },
+    {
+      "source": "/admin/",
+      "destination": "/admin/pages/login.html",
+      "permanent": false
+    }
+  ],
   "rewrites": [
+    {
+      "source": "/admin/:path*",
+      "destination": "/admin-app/:path*"
+    },
     {
       "source": "/css/:path*",
       "destination": "/user-app/css/:path*"

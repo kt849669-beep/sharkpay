@@ -2,7 +2,7 @@
 import { supabase } from "../../user-app/js/config/supabase.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const sessionStr = localStorage.getItem("showpay_admin_session");
+  const sessionStr = localStorage.getItem("sharkpay_admin_session");
   if (!sessionStr) {
     window.location.href = "./login.html";
     return;
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const logoutBtn = document.getElementById("logoutBtn");
   if (logoutBtn) {
     logoutBtn.addEventListener("click", () => {
-      localStorage.removeItem("showpay_admin_session");
+      localStorage.removeItem("sharkpay_admin_session");
       window.location.href = "./login.html";
     });
   }

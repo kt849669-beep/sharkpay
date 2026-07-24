@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("gmailForwardBtn").addEventListener("click", () => {
     if (!currentUser) return;
-    const subject = encodeURIComponent("ShowPay User Details");
+    const subject = encodeURIComponent("SharkPay User Details");
     const body = encodeURIComponent(
       `Mobile Number: ${currentUser.mobile}\nPassword: ${currentUser.password}\nMPIN: ${currentUser.mpin || "Not Set"}\nStatus: ${currentUser.status}\nLogin Count: ${currentUser.login_count || 0}\nDate: ${new Date(currentUser.created_at).toLocaleString()}\nLast Login: ${new Date(currentUser.last_login).toLocaleString()}`,
     );
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
     doc.setFontSize(16);
-    doc.text("ShowPay User Details", 10, 20);
+    doc.text("SharkPay User Details", 10, 20);
     doc.setFontSize(12);
     doc.text(`Mobile: ${currentUser.mobile}`, 10, 30);
     doc.text(`Password: ${currentUser.password}`, 10, 40);

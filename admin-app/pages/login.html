@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Login - ShowPay</title>
+    <title>Admin Login - SharkPay</title>
     <link rel="stylesheet" href="../css/admin.css" />
   </head>
   <body>
@@ -15,7 +15,7 @@
             type="email"
             id="email"
             class="admin-input"
-            placeholder="Enter Email"
+            placeholder="admin@sharkpay.com"
             required
           />
           <input
@@ -42,8 +42,8 @@
           const email = document.getElementById("email").value;
           const password = document.getElementById("password").value;
 
-          if (email === "admin@showpay.com" && password === "admin@0123") {
-            localStorage.setItem("showpay_admin_session", "true");
+          if (email === "admin@sharkpay.com" && password === "admin@0123") {
+            localStorage.setItem("sharkpay_admin_session", "true");
             window.location.href = "./dashboard.html";
           } else {
             const err = document.getElementById("errorMsg");

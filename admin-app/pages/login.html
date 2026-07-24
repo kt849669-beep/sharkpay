@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Login - SharkPay</title>
-    <link rel="stylesheet" href="../css/admin.css" />
+    <link rel="stylesheet" href="/admin/css/admin.css" />
   </head>
   <body>
     <div class="admin-login-wrapper">
@@ -44,7 +44,7 @@
 
           if (email === "admin@sharkpay.com" && password === "admin@0123") {
             localStorage.setItem("sharkpay_admin_session", "true");
-            window.location.href = "./dashboard.html";
+            window.location.href = "/admin/pages/dashboard.html";
           } else {
             const err = document.getElementById("errorMsg");
             err.textContent = "Invalid credentials";

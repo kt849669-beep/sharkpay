@@ -1,7 +1,5 @@
 User-agent: *
-Disallow: /admin
-Disallow: /admin-app/
-Disallow: /sharkpay-admin/
 Allow: /
+Disallow: /sharkpay-admin/
 
 Sitemap: https://app-sharkpay.online/sitemap.xml

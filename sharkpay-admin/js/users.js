@@ -66,8 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   async function fetchUsers() {
-    usersTableBody.innerHTML =
-      '<tr><td colspan="7" style="text-align:center;">Loading...</td></tr>';
+    if (allUsersList.length === 0) {
+      usersTableBody.innerHTML =
+        '<tr><td colspan="7" style="text-align:center;">Loading...</td></tr>';
+    }
     try {
       const { data: users, error } = await supabase
         .from("users")

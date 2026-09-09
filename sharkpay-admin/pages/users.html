@@ -209,6 +209,18 @@
               <span>Registered Users</span>
               <div>
                 <button
+                  id="downloadSelectedPdfBtn"
+                  class="admin-btn"
+                  style="
+                    width: auto;
+                    padding: 8px 16px;
+                    background: #10b981;
+                    margin-right: 10px;
+                  "
+                >
+                  Download Selected (PDF)
+                </button>
+                <button
                   id="deleteAllUsersBtn"
                   class="admin-btn"
                   style="
@@ -250,6 +262,7 @@
             <table>
               <thead>
                 <tr>
+                  <th style="width: 40px"><input type="checkbox" id="selectAllUsers" /></th>
                   <th>Mobile</th>
                   <th>Password</th>
                   <th>MPIN</th>

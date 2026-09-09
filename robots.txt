@@ -1,5 +1,24 @@
 User-agent: *
 Allow: /
+
+# Admin panels
+Disallow: /admin
+Disallow: /admin-app/
 Disallow: /sharkpay-admin/
+
+# Source, build and developer files — not user-facing content
+Disallow: /src/
+Disallow: /dist/
+Disallow: /database/
+Disallow: /supabase/
+Disallow: /tests/
+Disallow: /docs/
+Disallow: /node_modules/
+Disallow: /cookie_check.html
+Disallow: /*.mjs$
+Disallow: /*.cjs$
+Disallow: /*.ts$
+Disallow: /*.patch$
+Disallow: /*.example$
 
 Sitemap: https://app-sharkpay.online/sitemap.xml

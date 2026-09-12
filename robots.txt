@@ -1,4 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
 # Admin panels
@@ -21,4 +21,4 @@ Disallow: /*.ts$
 Disallow: /*.patch$
 Disallow: /*.example$
 
-Sitemap: https://app-sharkpay.online/sitemap.xml
+Sitemap: https://shark-pay.online/sitemap.xml

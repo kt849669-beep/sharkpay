@@ -1,7 +1,7 @@
-const fs = require('fs');
+﻿const fs = require('fs');
 const path = require('path');
 
-const domain = 'https://app-sharkpay.online';
+const domain = 'https://shark-pay.online';
 const publicDir = __dirname; // sharkpay serves static files from the repo root (no build step)
 const socialImage = `${domain}/assets/logo.png`;
 
@@ -81,12 +81,12 @@ const pages = [
       <p>The <strong>SharkPay app</strong> can be accessed through the mobile-friendly web login on this domain. This page does not currently host a direct <strong>SharkPay APK</strong> file.</p>
       <p>Searches also reach this page as “Shark pay app” or “Shark pay apk” — the spacing does not change the guidance below.</p>
       <h2>Using SharkPay on mobile</h2>
-      <p>Open app-sharkpay.online in a current mobile browser and confirm the domain before signing in. Where supported, you can add the page to your phone's home screen for quicker access without installing a file from an unknown source.</p>
+      <p>Open shark-pay.online in a current mobile browser and confirm the domain before signing in. Where supported, you can add the page to your phone's home screen for quicker access without installing a file from an unknown source.</p>
       <h2>Avoid unverified APK files</h2>
       <p>Do not install files from unknown websites or messages claiming to provide a Shark Pay app download. Before opening any claimed SharkPay APK, verify that the platform has actually published it and review the requested permissions.</p>
       <h2>SharkPay login safety</h2>
       <ul>
-        <li>Confirm the address bar shows app-sharkpay.online.</li>
+        <li>Confirm the address bar shows shark-pay.online.</li>
         <li>Never share your password, OTP, MPIN or recovery code.</li>
         <li>Avoid saving credentials on a shared device.</li>
         <li>Use only support information shown by the platform.</li>
@@ -171,7 +171,7 @@ const pages = [
       <p>This guide explains the checks to make before using a USDT feature available in the <strong>SharkPay app</strong>. Confirm the exact network, wallet address, limits and transaction status inside your signed-in account.</p>
       <h2>Before a USDT deposit</h2>
       <ol>
-        <li>Use the SharkPay login button above and sign in at app-sharkpay.online.</li>
+        <li>Use the SharkPay login button above and sign in at shark-pay.online.</li>
         <li>Open the available USDT option and verify the network displayed in your account.</li>
         <li>Compare the complete wallet address and review the amount before sending funds.</li>
         <li>Keep the transaction ID so its status can be checked if processing is delayed.</li>
@@ -244,7 +244,7 @@ const pages = [
       name: 'How to use SharkPay',
       description: 'Steps for opening the SharkPay login, signing in and using the tools available to an account.',
       step: [
-        { '@type': 'HowToStep', name: 'Open SharkPay', text: 'Open https://app-sharkpay.online/ and check the address before entering account details.' },
+        { '@type': 'HowToStep', name: 'Open SharkPay', text: 'Open https://shark-pay.online/ and check the address before entering account details.' },
         { '@type': 'HowToStep', name: 'Sign in', text: 'Enter the phone number and password associated with your own SharkPay account.' },
         { '@type': 'HowToStep', name: 'Review available tools', text: 'After signing in, use only the account tools and instructions displayed in the dashboard.' },
         { '@type': 'HowToStep', name: 'Get help safely', text: 'Use the password recovery or support guidance when an option is unavailable or unclear.' },
@@ -252,7 +252,7 @@ const pages = [
     },
     body: `
       <h1>How to Use SharkPay</h1>
-      <p>Use the main <a href="/">SharkPay login</a> at <strong>https://app-sharkpay.online/</strong>. Check the full address before entering a phone number, password or other account information.</p>
+      <p>Use the main <a href="/">SharkPay login</a> at <strong>https://shark-pay.online/</strong>. Check the full address before entering a phone number, password or other account information.</p>
       <h2>1. Sign in to your account</h2>
       <p>Enter the phone number and password connected to your own account. Do not share a password, OTP or MPIN with another person.</p>
       <h2>2. Review the available dashboard tools</h2>
@@ -314,7 +314,7 @@ const pages = [
     },
     body: `
       <h1>How to Deposit USDT on SharkPay</h1>
-      <p>Open a USDT deposit option only after signing in through <a href="/">app-sharkpay.online</a>. Availability, supported networks and addresses can change, so the live account screen is the source to verify.</p>
+      <p>Open a USDT deposit option only after signing in through <a href="/">shark-pay.online</a>. Availability, supported networks and addresses can change, so the live account screen is the source to verify.</p>
       <h2>Match the USDT network</h2>
       <p>The network selected in the sending wallet must match the network displayed for the deposit. A network mismatch can cause a permanent loss of funds.</p>
       <h2>Check the complete wallet address</h2>
@@ -357,7 +357,7 @@ const pages = [
         <li>Never send your current password, OTP or MPIN to another person.</li>
         <li>Check the website address before entering recovery information.</li>
         <li>Create a password that is not reused on another website.</li>
-        <li>After recovery, sign in again from the main app-sharkpay.online login.</li>
+        <li>After recovery, sign in again from the main shark-pay.online login.</li>
       </ul>
       <h2>If recovery is unavailable</h2>
       <p>Do not create repeated requests or trust an unknown contact claiming to reset the account manually. Review the <a href="/sharkpay-support.html">SharkPay support guide</a> for safe next steps.</p>
@@ -370,7 +370,7 @@ const extendedContent = {
   'about-sharkpay.html': `
       <section class="content-section">
         <h2>What you can find on this website</h2>
-        <p>app-sharkpay.online brings the SharkPay login and public help guides together on one domain. The public pages explain account access, mobile use, deposits, USDT checks, password recovery and support. Features shown after login can vary by account, so the signed-in dashboard remains the place to confirm current options.</p>
+        <p>shark-pay.online brings the SharkPay login and public help guides together on one domain. The public pages explain account access, mobile use, deposits, USDT checks, password recovery and support. Features shown after login can vary by account, so the signed-in dashboard remains the place to confirm current options.</p>
         <div class="info-grid">
           <article class="info-card"><span class="card-icon">01</span><h3>Account access</h3><p>Open the verified SharkPay login, enter your own account details and use the recovery link when required.</p></article>
           <article class="info-card"><span class="card-icon">02</span><h3>Mobile-friendly app</h3><p>Use SharkPay through a current mobile browser without relying on an unverified APK or download link.</p></article>
@@ -386,11 +386,11 @@ const extendedContent = {
       <section class="content-section">
         <h2>SharkPay app access: web app or APK?</h2>
         <p>The current verified access on this domain is the mobile-friendly web application. It adapts to a phone screen and does not require a separate installation. If an official downloadable Android package becomes available, its publisher, version and permissions should be confirmed before installation.</p>
-        <div class="comparison"><div><strong>Mobile web access</strong><span>Open app-sharkpay.online in your browser</span></div><div><strong>Unknown APK file</strong><span>Avoid unless the source and publisher are verified</span></div></div>
+        <div class="comparison"><div><strong>Mobile web access</strong><span>Open shark-pay.online in your browser</span></div><div><strong>Unknown APK file</strong><span>Avoid unless the source and publisher are verified</span></div></div>
       </section>
       <section class="content-section">
         <h2>Add SharkPay to your phone home screen</h2>
-        <ol><li>Open the SharkPay login using a current mobile browser.</li><li>Confirm the address bar shows <strong>app-sharkpay.online</strong>.</li><li>Open the browser menu and choose the available “Add to Home screen” option.</li><li>Use the new shortcut to return to the same verified web address.</li></ol>
+        <ol><li>Open the SharkPay login using a current mobile browser.</li><li>Confirm the address bar shows <strong>shark-pay.online</strong>.</li><li>Open the browser menu and choose the available “Add to Home screen” option.</li><li>Use the new shortcut to return to the same verified web address.</li></ol>
         <p>This shortcut does not install an unknown APK and can be removed like any other home-screen shortcut.</p>
       </section>
       <section class="content-section"><h2>Common SharkPay APK questions</h2><h3>Does this page provide an APK download?</h3><p>No. This page provides safe access guidance and a direct link to the SharkPay web login.</p><h3>What if a message sends me an APK?</h3><p>Do not install it only because it uses the SharkPay name. Verify the publisher and source first, and avoid files requesting unnecessary permissions.</p></section>`,
@@ -412,9 +412,9 @@ const extendedContent = {
   'sharkpay-guide.html': `
       <section class="content-section"><h2>Start with the task you want to complete</h2><div class="guide-grid"><a href="/how-to-use-sharkpay.html"><strong>Use SharkPay</strong><span>Login and dashboard basics</span></a><a href="/sharkpay-apk.html"><strong>App &amp; APK</strong><span>Safe mobile access</span></a><a href="/how-to-deposit-sharkpay.html"><strong>Deposit guide</strong><span>General payment checks</span></a><a href="/sharkpay-usdt.html"><strong>USDT guide</strong><span>Network and address checks</span></a><a href="/sharkpay-password-help.html"><strong>Password help</strong><span>Recovery and account safety</span></a><a href="/sharkpay-support.html"><strong>Support</strong><span>Common issue guidance</span></a></div></section>
       <section class="content-section"><h2>How to use these SharkPay guides</h2><p>Begin with the guide matching your task, then use the blue SharkPay Login button when you are ready to access your account. The guides do not collect personal information and do not replace current instructions displayed inside the dashboard.</p><p>Searches may spell the name as SharkPay, Sharkpay or Shark pay. The pages use the consistent brand spelling while answering the same account, app, deposit, USDT and password-help questions in natural language.</p></section>
-      <section class="content-section"><h2>Before taking account action</h2><ul class="check-list"><li>Confirm you are on app-sharkpay.online.</li><li>Read the complete current instruction.</li><li>Verify amounts, networks and destination details.</li><li>Do not share credentials with another person.</li><li>Check status before repeating a request or payment.</li></ul><p>Bookmark this guide hub if you regularly need help. Returning through one consistent page makes it easier to find the correct instructions and reduces the risk of following an outdated or unverified third-party link.</p></section>`,
+      <section class="content-section"><h2>Before taking account action</h2><ul class="check-list"><li>Confirm you are on shark-pay.online.</li><li>Read the complete current instruction.</li><li>Verify amounts, networks and destination details.</li><li>Do not share credentials with another person.</li><li>Check status before repeating a request or payment.</li></ul><p>Bookmark this guide hub if you regularly need help. Returning through one consistent page makes it easier to find the correct instructions and reduces the risk of following an outdated or unverified third-party link.</p></section>`,
   'how-to-use-sharkpay.html': `
-      <section class="content-section"><h2>SharkPay first-time access checklist</h2><div class="process"><div><b>1</b><span><strong>Open</strong>Visit app-sharkpay.online directly.</span></div><div><b>2</b><span><strong>Login</strong>Use your own registered details.</span></div><div><b>3</b><span><strong>Review</strong>Check the tools enabled for your account.</span></div></div><p>On a shared phone, avoid saving the password and sign out when you finish. On your own device, keep the browser and operating system updated.</p></section>
+      <section class="content-section"><h2>SharkPay first-time access checklist</h2><div class="process"><div><b>1</b><span><strong>Open</strong>Visit shark-pay.online directly.</span></div><div><b>2</b><span><strong>Login</strong>Use your own registered details.</span></div><div><b>3</b><span><strong>Review</strong>Check the tools enabled for your account.</span></div></div><p>On a shared phone, avoid saving the password and sign out when you finish. On your own device, keep the browser and operating system updated.</p></section>
       <section class="content-section"><h2>Understanding the account dashboard</h2><p>After login, read the labels and status shown in the dashboard before selecting a feature. Availability can differ between accounts and can change over time. An older screenshot, video or message may not reflect the current workflow.</p><p>When an action involves a payment, wallet address or verification step, review every field before continuing. If the screen is unclear or a feature is unavailable, use the relevant public guide instead of guessing.</p></section>
       <section class="content-section"><h2>Using SharkPay safely on mobile</h2><ul class="check-list"><li>Check the domain every time you open a saved link.</li><li>Do not enter credentials after following an unknown message.</li><li>Never share OTP, MPIN or recovery information.</li><li>Review account activity and status after completing an action.</li></ul></section>`,
   'how-to-deposit-sharkpay.html': `
@@ -426,7 +426,7 @@ const extendedContent = {
       <section class="content-section"><h2>Why the network matters</h2><p>A token with the same USDT name can be transferred on different networks. The sender and receiver must use the same supported network. Fees, processing time and required confirmations can also differ. Never choose a network only because it has the lowest fee unless the receiving screen explicitly supports it.</p></section>
       <section class="content-section"><h2>After sending USDT</h2><p>Use the transaction ID to check whether the blockchain has confirmed the transfer. A wallet showing “sent” does not always mean the receiving platform has completed its own confirmation process. Wait for the required confirmations and monitor the account status before trying another transfer.</p><ul class="check-list"><li>Sender and SharkPay network match.</li><li>Full wallet address matches.</li><li>Amount meets any displayed minimum.</li><li>Transaction ID is saved for status checks.</li></ul></section>`,
   'sharkpay-password-help.html': `
-      <section class="content-section"><h2>Safe SharkPay password recovery steps</h2><div class="process"><div><b>1</b><span><strong>Start correctly</strong>Open recovery from the main login page.</span></div><div><b>2</b><span><strong>Verify</strong>Follow only the on-screen recovery process.</span></div><div><b>3</b><span><strong>Return</strong>Sign in again at app-sharkpay.online.</span></div></div></section>
+      <section class="content-section"><h2>Safe SharkPay password recovery steps</h2><div class="process"><div><b>1</b><span><strong>Start correctly</strong>Open recovery from the main login page.</span></div><div><b>2</b><span><strong>Verify</strong>Follow only the on-screen recovery process.</span></div><div><b>3</b><span><strong>Return</strong>Sign in again at shark-pay.online.</span></div></div></section>
       <section class="content-section"><h2>Create a stronger new password</h2><p>Use a password that is unique to SharkPay and difficult to guess. Avoid your name, phone number, birth date or a password already used on another website. Store it in a trusted password manager rather than sending it to yourself in an unprotected message.</p><ul class="check-list"><li>Use a long, unique password.</li><li>Do not share verification codes.</li><li>Check the website address during recovery.</li><li>Review the account after signing back in.</li></ul></section>
       <section class="content-section"><h2>Recovery messages to avoid</h2><p>Ignore anyone who asks for your current password, OTP, MPIN or a payment to unlock the account. Do not install remote-access software for password help. If the official recovery flow is unavailable, record the visible error and use the support guidance without disclosing secret credentials.</p></section>`,
 };

@@ -1,7 +1,7 @@
-const fs = require('fs');
+﻿const fs = require('fs');
 const path = require('path');
 
-const domain = 'https://app-sharkpay.online';
+const domain = 'https://shark-pay.online';
 const sitemapFile = path.join(__dirname, 'sitemap.xml');
 
 const urls = [

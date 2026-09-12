@@ -3,14 +3,6 @@
   "buildCommand": "echo 'skip build'",
   "outputDirectory": ".",
   "framework": null,
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "has": [{ "type": "host", "value": "www.shark-pay.online" }],
-      "destination": "https://shark-pay.online/$1",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
       "source": "/admin",

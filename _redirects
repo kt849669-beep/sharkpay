@@ -1,0 +1,8 @@
+/admin /admin-app/pages/login.html 200
+/admin/ /admin-app/pages/login.html 200
+/admin/* /admin-app/:splat 200
+/css/* /user-app/css/:splat 200
+/js/* /user-app/js/:splat 200
+/pages/* /user-app/pages/:splat 200
+/assets/* /user-app/assets/:splat 200
+/ /user-app/pages/login.html 200

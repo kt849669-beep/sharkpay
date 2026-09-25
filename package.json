@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "node build-cloudflare.mjs",
+    "preview": "vite preview",
+    "deploy": "npm run build && npx --yes wrangler@4.140.0 pages deploy --branch main"
   },
   "dependencies": {
     "vite": "^6.2.3"
